@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="flex justify-between align-middle  w-full flex-1 ">
       <ul className="flex justify-start gap-4 items-center h-full">
         <li><Link className="text-white" href="/">Areality solutions</Link></li>
-        <li><Link className="text-white" href="/">Technology</Link></li>
+        <li><Link className="text-white" href="/technology/">Technology</Link></li>
         <li><Link className="text-white"  href="/">Subscription</Link></li>
         <li><Link className="text-white" href="/">AI to Reduce</Link></li>
       </ul>
