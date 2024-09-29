@@ -11,13 +11,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface HeroProps {
-    title: string;
-    slogan: string;
-    info: string;
-}
 
-const Hero = ({ title, slogan, info }: HeroProps) => {
+
+const Hero = () => {
 
   const titleRef = useRef(null);
     const sloganRef = useRef(null);
