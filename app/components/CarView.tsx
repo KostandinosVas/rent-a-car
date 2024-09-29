@@ -26,7 +26,7 @@ const CarView: React.FC = () => {
           {/* Contact Button */}
           <a
             href="mailto:info@vrnavs.com"
-            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded inline-block transition duration-300"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded inline-block transition duration-300"
           >
             info@vrnavs.com
           </a>

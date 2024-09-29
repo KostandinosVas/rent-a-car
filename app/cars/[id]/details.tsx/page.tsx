@@ -1,6 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
+'use client'
 
+import { useRouter } from 'next/navigation'
+import React from 'react'
 
 const cars = [
     {
@@ -21,7 +22,6 @@ const cars = [
         bodyStyle: "Coupe",
         driveType: "Rear-Wheel Drive",
         fuelType: "Petrol",
-
     },
     {
         id: 2,
@@ -81,50 +81,41 @@ const cars = [
         fuelType: "Petrol",
     },
 ]
+export default function RentalDetails({ params }: { params: { id: string } }) {
+    const router = useRouter()
+    const car = cars.find(c => c.id === parseInt(params.id))
+    if (!car) {
+        return <div>Car not found</div>
+    }
 
-
-
-const CarShowcase = () => {
     return (
-        <div className="car-showcase flex justify-center flex-col items-center m-8 ">
-            {cars.map((car) => (
-                <div key={car.id} className={`card flex justify-between ${car.id % 2 === 0 ? "flex-row-reverse" : "flex-row"} p-[4rem] shadow-md max-w-[70%] my-6`}>
-                    <div className="image flex-1  z-50 ">
-                        <Image
-                            src={car.image}
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                            alt="Picture of the author"
-                            className="rounded-md" />
-                    </div>
-                    <div className="infos flex-1 flex flex-col justify-center items-start ml-[10%] gap-2">
-                        <h3 className="text-3xl ">{car.title}</h3>
-                        <p className="max-w-[70%]">{car.description}</p>
-                        <p className="text-green-600">Price : {car.price} /day</p>
-                        <p className="text-slate-500 ">Pick color : </p>
-                        <div className="pick-color flex justify-between items-center gap-4">
-                            <span className="w-6 h-6 bg-red-500 rounded-full cursor-pointer"> </span>
-                            <span  className="w-6 h-6 bg-blue-500 rounded-full cursor-pointer"></span>
-                            <span   className="w-6 h-6 bg-green-500 rounded-full cursor-pointer"></span>
-                            {/* <div><button className="bg-blue-500 ml-7 text-white px-12 py-2 rounded-lg">Buy</button></div> */}
-                            <Link href={`/cars/${car.id}`} className="">
-                                <button className="bg-gray-800 text-white px-6 py-2 rounded-md">View Details</button>
-                            </Link>
-                        </div>
-
-                    </div>
+        <div className="min-h-screen bg-gray-100 py-12 flex items-center justify-center">
+            <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-2xl w-full">
+                <h1 className="text-3xl font-bold mb-6 text-center">{car.title}</h1>
+                <img src={car.image} alt={car.title} className="w-full h-64 object-cover mb-6 rounded" />
+                <div className="grid grid-cols-2 gap-4">
+                    <p><strong>Price:</strong> {car.price}</p>
+                    <p><strong>Horsepower:</strong> {car.horsepower}</p>
+                    <p><strong>Acceleration:</strong> {car.Acceleration}</p>
+                    <p><strong>Top Speed:</strong> {car.topSpeed}</p>
+                    <p><strong>Engine Type:</strong> {car.engineType}</p>
+                    <p><strong>Transmission:</strong> {car.transmission}</p>
+                    <p><strong>Fuel Consumption:</strong> {car.fuelConsumption}</p>
+                    <p><strong>Emissions:</strong> {car.emissions}</p>
+                    <p><strong>Doors:</strong> {car.doors}</p>
+                    <p><strong>Seats:</strong> {car.seats}</p>
+                    <p><strong>Body Style:</strong> {car.bodyStyle}</p>
+                    <p><strong>Drive Type:</strong> {car.driveType}</p>
+                    <p><strong>Fuel Type:</strong> {car.fuelType}</p>
                 </div>
-            ))}
-
-            <Link href="/allCars" className="mt-8">
-                <button className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors">
-                    Show More Cars
+                <p className="mt-6"><strong>Description:</strong> {car.description}</p>
+                <button
+                    onClick={() => router.push('/cars')}
+                    className="mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+                >
+                    Back to Cars
                 </button>
-            </Link>
+            </div>
         </div>
     )
 }
-
-export default CarShowcase
