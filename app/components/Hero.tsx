@@ -63,7 +63,7 @@ const Hero = () => {
 
 
   return (
-    <section className="hero  bg-[url('/images/car51.png')] relative">
+    <section className="hero  bg-[url('/images/car51.png')] relative overflow-hidden">
       <Image src={CarSet} alt="car" width={200} height={300} className="absolute top-[10%] left-[70%] right-0 bottom-0 z-[200]" />
 
 
@@ -75,7 +75,7 @@ const Hero = () => {
       {/* <CgEditBlackPoint className="text-4xl text-slate-200 mb-4 absolute top-[60%] left-[20%] right-0 bottom-0 z-[200]" /> */}
       <CgLayoutGrid className="text-4xl text-slate-200 mb-4 absolute top-[35%] left-[85%] right-0 bottom-0 z-[200]" />
 
-      <div className="overlay ml-[100px] ">
+      <div className="overlay lg:ml-[100px] px-3">
 
         <div className="hero-content z-50">
           <div>
@@ -98,10 +98,10 @@ const Hero = () => {
           <div className="relative">
             <p className=" max-w-[400px] text-start">Best prices, premium car selection, exclusive access, insurance coverage, flexible pickup/dropoff locations.</p>
             <div className="flex flex-row gap-2 absolute top-[50%] left-[120%] translate-x-[-50%] translate-y-[-50%] ">
-              <div className="animate-pulse bg-gray-300 w-12 h-12 rounded-full"></div>
+              <div className="animate-pulse bg-gray-300 w-12 h-12 rounded-full hidden xl:block"></div>
               <div className="flex flex-col gap-2">
-                <div className="animate-pulse bg-gray-300 w-28 h-5 rounded-full"></div>
-                <div className="animate-pulse bg-gray-300 w-36 h-5 rounded-full"></div>
+                <div className="animate-pulse bg-gray-300 w-28 h-5 rounded-full hidden xl:block"></div>
+                <div className="animate-pulse bg-gray-300 w-36 h-5 rounded-full hidden xl:block"></div>
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Hero = () => {
         </div>
         <div className="car-info " ref={infoRef}>
 
-          <div className="stop-distance relative">
+          <div className="stop-distance relative hidden">
             <span>1.5m Stop</span>
             <span><CgEditBlackPoint className="text-2xl text-slate-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%]" /></span>
           </div>

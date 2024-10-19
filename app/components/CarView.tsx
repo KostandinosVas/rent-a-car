@@ -6,10 +6,10 @@ const CarView: React.FC = () => {
   return (
     <section className="relative h-screen bg-[url('/images/car12.jpg')] bg-cover bg-no-repeat bg-center">
 
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-between p-12 text-white">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex xl:flex-row flex-col  justify-between p-12 text-white">
         {/* Left Section */}
         <div className="max-w-lg">
-          <h1 className="text-4xl font-bold mb-6">
+          <h1 className="text-xl md:text-3xl font-bold mb-6">
             AI to reduce accidents, save time, make interesting traveling around the city.
           </h1>
           <p className="text-lg mb-8">

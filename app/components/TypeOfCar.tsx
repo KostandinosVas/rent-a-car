@@ -12,10 +12,10 @@ const TypesOfCar: React.FC = () => {
       {/* Content on top of background */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-4">
         {/* Upper section with dots and labels */}
-        <div className="flex justify-center space-x-16 mb-12">
+        <div className="hidden md:flex justify-center space-x-16 mb-12 ">
           {["Order", "Setup", "Analyse", "Test", "Finished"].map((step, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="w-4 h-4 bg-gray-500 rounded-full mb-2"></div>
+              <div className="w-4 h-4 bg-gray-500 rounded-full mb-2 "></div>
               <span className="text-gray-300 text-sm">{step}</span>
             </div>
           ))}

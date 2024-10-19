@@ -45,12 +45,12 @@ const NavItem = ({ href, text }: Props) => {
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center h-[100px] z-50 mx-auto w-full absolute top-0 left-0 right-0 px-[50px] bg-white bg-opacity-5">
-      <div className="flex-1 justify-start items-center flex z-10">
+    <div className="flex justify-between items-center h-[100px] z-50 mx-auto w-full absolute top-0 left-0 right-0 px-[50px] bg-white bg-opacity-5 ">
+      <div className="flex-1 justify-start items-center flex z-10 ">
         <a href="/"> <Image src={Logo} alt="logo" width={130} height={60} className="" /></a> 
         <span className="text-white text-4xl ml-3 font-bold"><span className='font-light'>Z</span><span className="text-xl text-white font-normal">- Supercars</span></span>
       </div>
-      <nav className="flex justify-center align-middle w-full flex-1">
+      <nav className="flex justify-center align-middle w-full flex-1 hidden">
         <ul className="flex justify-start gap-4 items-center h-full">
           <NavItem href="/" text="Home" />
           <NavItem href="/technology/" text="Technology" />

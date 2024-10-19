@@ -9,7 +9,7 @@ import RentalInfoBox from "./components/RentalInfo";
 
 export default function Home() {
   return (
-    <main>
+    <main className="border border-black ">
       <Hero  />
       <Breathroom title="Feel the Thrill. Drive the Dream." slogan="Rent a SUPER Car" />
       <CarView />

@@ -25,6 +25,42 @@ body {
   height: 100vh;
 }
 
+@media screen and (max-width: 1080px) {
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .car-info {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .car-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    position: static;
+    display: none;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem !important;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
 /* .overlay {
   position: absolute;
   top: 0;

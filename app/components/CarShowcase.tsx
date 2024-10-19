@@ -88,7 +88,7 @@ const CarShowcase = () => {
     return (
         <div className="car-showcase flex justify-center flex-col items-center m-8 ">
             {cars.map((car) => (
-                <div key={car.id} className={`card flex justify-between ${car.id % 2 === 0 ? "flex-row-reverse" : "flex-row"} p-[4rem] shadow-md max-w-[70%] my-6`}>
+                <div key={car.id} className={`card flex flex-col justify-between xl:${car.id % 2 === 0 ? "flex-row-reverse" : "flex-row"} xl:p-[4rem] shadow-md xl:max-w-[70%] my-8`}>
                     <div className="image flex-1  z-50 ">
                         <Image
                             src={car.image}
@@ -99,18 +99,18 @@ const CarShowcase = () => {
                             alt="Picture of the author"
                             className="rounded-md" />
                     </div>
-                    <div className="infos flex-1 flex flex-col justify-center items-start ml-[10%] gap-2">
-                        <h3 className="text-3xl ">{car.title}</h3>
-                        <p className="max-w-[70%]">{car.description}</p>
+                    <div className="infos flex-1 flex flex-col justify-center items-start ml-[10%] gap-4">
+                        <h3 className="xl:text-3xl text-xl mt-2">{car.title}</h3>
+                        <p className="xl:max-w-[70%]">{car.description}</p>
                         <p className="text-green-600">Price : {car.price} /day</p>
                         <p className="text-slate-500 ">Pick color : </p>
-                        <div className="pick-color flex justify-between items-center gap-4">
+                        <div className="pick-color flex justify-between items-center gap-6">
                             <span className="w-6 h-6 bg-red-500 rounded-full cursor-pointer"> </span>
                             <span  className="w-6 h-6 bg-blue-500 rounded-full cursor-pointer"></span>
                             <span   className="w-6 h-6 bg-green-500 rounded-full cursor-pointer"></span>
                             {/* <div><button className="bg-blue-500 ml-7 text-white px-12 py-2 rounded-lg">Buy</button></div> */}
                             <Link href={`/cars/${car.id}`} className="">
-                                <button className="bg-gray-800 text-white px-6 py-2 rounded-md">View Details</button>
+                                <button className="bg-gray-800 text-white mb-2 px-6 py-2 rounded-md">View Details</button>
                             </Link>
                         </div>
 

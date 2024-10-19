@@ -60,9 +60,7 @@ const WhatWeDo: React.FC = () => {
       </div>
 
       {/* Arrow Icon */}
-      <div className="mt-8">
-        <button className="text-blue-500 text-4xl">↓</button>
-      </div>
+
     </section>
   );
 };

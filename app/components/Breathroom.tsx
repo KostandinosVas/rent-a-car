@@ -52,8 +52,8 @@ const Breathroom = ({ title, slogan }: BreathroomProps) => {
     }, []);
 
     return (
-        <div className="w-full h-[80vh] flex flex-col justify-center items-center bg-[url('/images/car90.jpg')] bg-cover bg-no-repeat bg-center bg-blend-multiply bg-yellow-200 overflow-hidden">
-            <h3 ref={titleRef} className='text-6xl text-white mb-5'>{title}</h3>
+        <div className=" w-full h-[80vh] flex flex-col justify-center items-center bg-[url('/images/car90.jpg')] bg-cover bg-no-repeat bg-center bg-blend-multiply bg-yellow-200 overflow-hidden">
+            <h3 ref={titleRef} className='text-2xl md:text-4xl xl:text-6xl text-white mb-5'>{title}</h3>
             <hr className='w-1/2 h-1 bg-white'></hr>
             <p ref={sloganRef} className='text-3xl text-white mt-5'>{slogan}</p>
         </div>
