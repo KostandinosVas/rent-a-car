@@ -102,8 +102,8 @@ const CarShowcase = () => {
                     <div className="infos flex-1 flex flex-col justify-center items-start ml-[10%] gap-4">
                         <h3 className="xl:text-3xl text-xl mt-2">{car.title}</h3>
                         <p className="xl:max-w-[70%]">{car.description}</p>
-                        <p className="text-green-600">Price : {car.price} /day</p>
-                        <p className="text-slate-500 ">Pick color : </p>
+                        <p className="text-blue-500">Price : {car.price} /day</p>
+                        <p className="text-gray-500">Pick color : </p>
                         <div className="pick-color flex justify-between items-center gap-6">
                             <span className="w-6 h-6 bg-red-500 rounded-full cursor-pointer"> </span>
                             <span  className="w-6 h-6 bg-blue-500 rounded-full cursor-pointer"></span>

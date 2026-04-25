@@ -228,7 +228,7 @@ const cars = [
 
 export default function AllCars() {
     return (
-        <div className='bg-gradient-to-tl from-red-600 to-gray-900'>
+        <div className='bg-gradient-to-tl from-blue-900 to-gray-900'>
             <div className=" container mx-auto px-4 py-8 pt-[20vh]">
                 <h1 className="text-3xl font-bold mb-6 text-white">All Cars</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -244,7 +244,7 @@ export default function AllCars() {
                             <div className="p-4">
                                 <h2 className="text-xl font-semibold mb-2">{car.title}</h2>
                                 <p className="text-gray-600 mb-2">{car.description}</p>
-                                <p className="text-green-600 font-semibold mb-4">Price: {car.price} /day</p>
+                                <p className="text-blue-500 font-semibold mb-4">Price: {car.price} /day</p>
                                 <Link href={`/cars/${car.id}`}>
                                     <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors">
                                         View Details

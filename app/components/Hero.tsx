@@ -67,13 +67,13 @@ const Hero = () => {
       <Image src={CarSet} alt="car" width={200} height={300} className="absolute top-[10%] left-[70%] right-0 bottom-0 z-[200]" />
 
 
-      <CgArrangeBack className="text-4xl text-slate-200 mb-4 absolute top-[35%] left-[50%] right-0 bottom-0 z-[200]" />
-      <CgAlignRight className="text-4xl text-slate-200 mb-4 absolute top-[35%] left-[55%] right-0 bottom-0 z-[200]" />
-      <CgArrangeFront className="text-4xl text-slate-200 mb-4 absolute top-[35%] left-[60%] right-0 bottom-0 z-[200]" />
-      <CgAlignTop className="text-4xl text-slate-200 mb-4 absolute top-[35%] left-[65%] right-0 bottom-0 z-[200]" />
-      <CgEditFlipH className="text-4xl text-slate-200 mb-4 absolute top-[35%] left-[80%] right-0 bottom-0 z-[200]" />
-      {/* <CgEditBlackPoint className="text-4xl text-slate-200 mb-4 absolute top-[60%] left-[20%] right-0 bottom-0 z-[200]" /> */}
-      <CgLayoutGrid className="text-4xl text-slate-200 mb-4 absolute top-[35%] left-[85%] right-0 bottom-0 z-[200]" />
+      <CgArrangeBack className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[50%] right-0 bottom-0 z-[200]" />
+      <CgAlignRight className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[55%] right-0 bottom-0 z-[200]" />
+      <CgArrangeFront className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[60%] right-0 bottom-0 z-[200]" />
+      <CgAlignTop className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[65%] right-0 bottom-0 z-[200]" />
+      <CgEditFlipH className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[80%] right-0 bottom-0 z-[200]" />
+      {/* <CgEditBlackPoint className="text-4xl text-gray-200 mb-4 absolute top-[60%] left-[20%] right-0 bottom-0 z-[200]" /> */}
+      <CgLayoutGrid className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[85%] right-0 bottom-0 z-[200]" />
 
       <div className="overlay lg:ml-[100px] px-3">
 
@@ -111,20 +111,20 @@ const Hero = () => {
 
           <div className="stop-distance relative hidden">
             <span>1.5m Stop</span>
-            <span><CgEditBlackPoint className="text-2xl text-slate-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%]" /></span>
+            <span><CgEditBlackPoint className="text-2xl text-gray-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%]" /></span>
           </div>
           <div className="details relative">
             <span>Dead-end</span>
             <span>Workers on the road</span>
-            <span><CgEditBlackPoint className="text-2xl text-slate-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%]" /></span>
+            <span><CgEditBlackPoint className="text-2xl text-gray-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%]" /></span>
           </div>
           <div className="front-car relative">
             <span>1.2m Front Car</span>
-            <span><CgEditBlackPoint className="text-2xl text-slate-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%] " /></span>
+            <span><CgEditBlackPoint className="text-2xl text-gray-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%] " /></span>
           </div>
           <div className="speed-info relative">
             <span>60mph - 948 Sprn Av, NY</span>
-            <span><CgEditBlackPoint className="text-2xl text-slate-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%] " /></span>
+            <span><CgEditBlackPoint className="text-2xl text-gray-200 absolute top-[50%] -left-[10%] translate-x-[-50%] translate-y-[-50%] " /></span>
           </div>
         </div>
       </div>

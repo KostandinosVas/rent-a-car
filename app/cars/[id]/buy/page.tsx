@@ -153,7 +153,7 @@ export default function RentCarForm({ params }: { params: Promise<{ id: string }
                             <h2 className="text-xl font-semibold mb-2">Car Details</h2>
                             <img src={car.image} alt={car.title} className="w-full h-48 object-cover mb-4 rounded" />
                             <p className="mb-2">{car.description}</p>
-                            <p className="text-lg font-bold text-green-600">Price: {car.price} /day</p>
+                            <p className="text-lg font-bold text-blue-500">Price: {car.price} /day</p>
                         </div>
                         <div className="md:w-1/2"> {/* Right column */}
                             <form onSubmit={handleSubmit}>

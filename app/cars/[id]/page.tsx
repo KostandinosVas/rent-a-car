@@ -149,7 +149,7 @@ export default async function CarPage({ params }: { params: Promise<{ id: string
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{otherCar.title}</h3>
                   <p className="text-gray-600 mb-4">{otherCar.description.substring(0, 100)}...</p>
-                  <p className="text-lg font-bold text-green-600 mb-4">{otherCar.price}</p>
+                  <p className="text-lg font-bold text-blue-500 mb-4">{otherCar.price}</p>
                   <a href={`/cars/${otherCar.id}`} className="bg-blue-500 text-white px-4 py-2 rounded-lg inline-block hover:bg-blue-600 transition duration-300">View Details</a>
                 </div>
               </div>

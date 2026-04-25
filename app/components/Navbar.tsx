@@ -50,12 +50,12 @@ const Navbar = () => {
         <a href="/"> <Image src={Logo} alt="logo" width={130} height={60} className="" /></a> 
         <span className="text-white text-4xl ml-3 font-bold"><span className='font-light'>Z</span><span className="text-xl text-white font-normal">- Supercars</span></span>
       </div>
-      <nav className="flex justify-center align-middle w-full flex-1 hidden">
+      <nav className="flex justify-center align-middle w-full flex-1">
         <ul className="flex justify-start gap-4 items-center h-full">
           <NavItem href="/" text="Home" />
           <NavItem href="/technology/" text="Technology" />
           <NavItem href="/allCars" text="All Cars" />
-          <NavItem href="/" text="AI to Reduce" />
+          <NavItem href="/ai" text="AI to Reduce" />
         </ul>
       </nav>
       <div className="header-buttons flex justify-end gap-4 items-center flex-1">
