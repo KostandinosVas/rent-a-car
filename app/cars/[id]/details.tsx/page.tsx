@@ -81,9 +81,10 @@ const cars = [
         fuelType: "Petrol",
     },
 ]
-export default function RentalDetails({ params }: { params: { id: string } }) {
+export default function RentalDetails({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = React.use(params)
     const router = useRouter()
-    const car = cars.find(c => c.id === parseInt(params.id))
+    const car = cars.find(c => c.id === parseInt(id))
     if (!car) {
         return <div>Car not found</div>
     }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
 import { notFound } from 'next/navigation'
 
@@ -84,9 +84,10 @@ const cars = [
     },
 ]
 
-export default function RentCarForm({ params }: { params: { id: string } }) {
+export default function RentCarForm({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params)
     const router = useRouter()
-    const car = cars.find(c => c.id === parseInt(params.id))
+    const car = cars.find(c => c.id === parseInt(id))
     const [formData, setFormData] = useState({
         name: '',
         email: '',

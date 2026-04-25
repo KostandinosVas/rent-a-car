@@ -83,8 +83,9 @@ const cars = [
   },
 ]
 
-export default function CarPage({ params }: { params: { id: string } }) {
-  const car = cars.find(c => c.id === parseInt(params.id))
+export default async function CarPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const car = cars.find(c => c.id === parseInt(id))
 
   if (!car) {
     notFound()
