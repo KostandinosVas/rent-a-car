@@ -88,18 +88,18 @@ const CarShowcase = () => {
     return (
         <div className="car-showcase flex justify-center flex-col items-center m-8 ">
             {cars.map((car) => (
-                <div key={car.id} className={`card flex flex-col justify-between xl:${car.id % 2 === 0 ? "flex-row-reverse" : "flex-row"} xl:p-[4rem] shadow-md xl:max-w-[70%] my-8`}>
-                    <div className="image flex-1  z-50 ">
+                <div key={car.id} className={`card flex ${car.id % 2 === 0 ? "flex-row-reverse" : "flex-row"} items-center p-6 xl:p-[4rem] shadow-md xl:max-w-[70%] my-8 gap-8`}>
+                    <div className="image flex-1 z-50 min-w-0">
                         <Image
                             src={car.image}
                             width={0}
                             height={0}
-                            sizes="100vw"
+                            sizes="50vw"
                             style={{ width: '100%', height: 'auto' }}
                             alt="Picture of the author"
                             className="rounded-md" />
                     </div>
-                    <div className="infos flex-1 flex flex-col justify-center items-start ml-[10%] gap-4">
+                    <div className="infos flex-1 flex flex-col justify-center items-start gap-4">
                         <h3 className="xl:text-3xl text-xl mt-2">{car.title}</h3>
                         <p className="xl:max-w-[70%]">{car.description}</p>
                         <p className="text-blue-500">Price : {car.price} /day</p>
