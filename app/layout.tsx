@@ -10,7 +10,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: "Rent a Car",
+  title: "Z Super Cars",
   description: "The Easy Way to rent Cars",
 };
 
