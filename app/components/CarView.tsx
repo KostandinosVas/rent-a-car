@@ -17,7 +17,7 @@ const CarView: React.FC = () => {
           </p>
 
           {/* Tags */}
-          <div className="flex space-x-4 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8">
             <span className="bg-white bg-opacity-20 text-sm px-4 py-2 rounded-full">Save time</span>
             <span className="bg-white bg-opacity-20 text-sm px-4 py-2 rounded-full">Reduce accidents</span>
             <span className="bg-white bg-opacity-20 text-sm px-4 py-2 rounded-full">Great traveling</span>
@@ -33,7 +33,7 @@ const CarView: React.FC = () => {
         </div>
 
         {/* Right Section - Car Information */}
-        <div className="flex flex-col space-y-4 text-right">
+        <div className="hidden xl:flex flex-col space-y-4 text-right">
           <div>
             <span className="text-lg font-semibold">1.2km Turn Right</span>
           </div>

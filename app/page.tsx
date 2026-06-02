@@ -10,7 +10,7 @@ import Cars3D from '@/app/components/3dcars'
 
 export default function Home() {
   return (
-    <main className="border border-black ">
+    <main className="border border-black overflow-x-hidden">
       <Hero  />
       <Breathroom title="Feel the Thrill. Drive the Dream." slogan="Rent a SUPER Car" />
       <CarView />

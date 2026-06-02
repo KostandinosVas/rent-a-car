@@ -88,7 +88,7 @@ const CarShowcase = () => {
     return (
         <div className="car-showcase flex justify-center flex-col items-center m-8 ">
             {cars.map((car) => (
-                <div key={car.id} className={`card flex ${car.id % 2 === 0 ? "flex-row-reverse" : "flex-row"} items-center p-6 xl:p-[4rem] shadow-md xl:max-w-[70%] my-8 gap-8`}>
+            <div key={car.id} className={`card flex flex-col ${car.id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"} items-center p-6 xl:p-[4rem] shadow-md xl:max-w-[70%] my-8 gap-8`}>
                     <div className="image flex-1 z-50 min-w-0">
                         <Image
                             src={car.image}

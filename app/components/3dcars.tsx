@@ -1,24 +1,46 @@
 'use client'
 
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectCube, Pagination } from 'swiper/modules'
+import { EffectCube } from 'swiper/modules'
+import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-cube'
-import 'swiper/css/pagination'
 import styles from './3dcars.module.css'
 
-const swiperConfig = {
-  effect: 'cube' as const,
-  grabCursor: true,
-  loop: true,
-  modules: [EffectCube, Pagination],
-  cubeEffect: {
-    shadow: true,
-    slideShadows: true,
-    shadowOffset: 20,
-    shadowScale: 0.94,
-  },
-  pagination: true,
+function SliderWithNav({ slides }: { slides: { src: string; alt: string }[] }) {
+  const [swiper, setSwiper] = useState<SwiperType | null>(null)
+
+  return (
+    <div className={styles.sliderBlock}>
+      <div className={styles.sliderWrap}>
+        <Swiper
+          effect="cube"
+          grabCursor
+          loop
+          modules={[EffectCube]}
+          cubeEffect={{ shadow: true, slideShadows: true, shadowOffset: 20, shadowScale: 0.94 }}
+          onSwiper={setSwiper}
+        >
+          {slides.map((s) => (
+            <SwiperSlide key={s.src}><img src={s.src} alt={s.alt} /></SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className={styles.navRow}>
+        <button className={styles.navBtn} aria-label="Previous" onClick={() => swiper?.slidePrev()}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <button className={styles.navBtn} aria-label="Next" onClick={() => swiper?.slideNext()}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default function Cars3D() {
@@ -26,14 +48,12 @@ export default function Cars3D() {
     <section className={styles.carsSection}>
       {/* Row 1: Slider LEFT, info RIGHT */}
       <div className={styles.carRow}>
-        <div className={styles.sliderWrap}>
-          <Swiper {...swiperConfig}>
-            <SwiperSlide><img src="/images/3dimages/front.webp" alt="Astrler V300 front" /></SwiperSlide>
-            <SwiperSlide><img src="/images/3dimages/left.webp" alt="Astrler V300 left" /></SwiperSlide>
-            <SwiperSlide><img src="/images/3dimages/rear.webp" alt="Astrler V300 rear" /></SwiperSlide>
-            <SwiperSlide><img src="/images/3dimages/right.webp" alt="Astrler V300 right" /></SwiperSlide>
-          </Swiper>
-        </div>
+        <SliderWithNav slides={[
+          { src: '/images/3dimages/front.webp', alt: 'Astrler V300 front' },
+          { src: '/images/3dimages/left.webp', alt: 'Astrler V300 left' },
+          { src: '/images/3dimages/rear.webp', alt: 'Astrler V300 rear' },
+          { src: '/images/3dimages/right.webp', alt: 'Astrler V300 right' },
+        ]} />
         <div className={styles.carInfo}>
           <h2>Astrler V300</h2>
           <p className={styles.carTagline}>
@@ -58,12 +78,13 @@ export default function Cars3D() {
               <span className={styles.value}>620 hp</span>
             </div>
           </div>
-          <div className={styles.carPrice}>$245,000 <span>starting price</span></div>
+          <div className={styles.carPrice}>$850 <span>/ day</span></div>
+          <a href="/cars/5" className={styles.rentBtn}>Rent This Car</a>
         </div>
       </div>
 
       {/* Row 2: info LEFT, Slider RIGHT */}
-      <div className={styles.carRow}>
+      <div className={`${styles.carRow} ${styles.carRowReverse}`}>
         <div className={styles.carInfo}>
           <h2>Lesiac Z1500</h2>
           <p className={styles.carTagline}>
@@ -88,16 +109,15 @@ export default function Cars3D() {
               <span className={styles.value}>1,500 hp</span>
             </div>
           </div>
-          <div className={styles.carPrice}>$389,000 <span>starting price</span></div>
+          <div className={styles.carPrice}>$1,200 <span>/ day</span></div>
+          <a href="/cars/6" className={styles.rentBtn}>Rent This Car</a>
         </div>
-        <div className={styles.sliderWrap}>
-          <Swiper {...swiperConfig}>
-            <SwiperSlide><img src="/images/3dimages/purple04.webp" alt="Lesiac Z1500 view 1" /></SwiperSlide>
-            <SwiperSlide><img src="/images/3dimages/purple03.webp" alt="Lesiac Z1500 view 2" /></SwiperSlide>
-            <SwiperSlide><img src="/images/3dimages/purple02.webp" alt="Lesiac Z1500 view 3" /></SwiperSlide>
-            <SwiperSlide><img src="/images/3dimages/purple01.webp" alt="Lesiac Z1500 view 4" /></SwiperSlide>
-          </Swiper>
-        </div>
+        <SliderWithNav slides={[
+          { src: '/images/3dimages/purple04.webp', alt: 'Lesiac Z1500 view 1' },
+          { src: '/images/3dimages/purple03.webp', alt: 'Lesiac Z1500 view 2' },
+          { src: '/images/3dimages/purple02.webp', alt: 'Lesiac Z1500 view 3' },
+          { src: '/images/3dimages/purple01.webp', alt: 'Lesiac Z1500 view 4' },
+        ]} />
       </div>
     </section>
   )

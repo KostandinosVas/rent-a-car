@@ -64,18 +64,17 @@ const Hero = () => {
 
   return (
     <section className="hero  bg-[url('/images/car51.png')] relative overflow-hidden">
-      <Image src={CarSet} alt="car" width={200} height={300} className="absolute top-[10%] left-[70%] right-0 bottom-0 z-[200]" />
+      <Image src={CarSet} alt="car" width={200} height={300} className="hidden md:block absolute top-[10%] left-[70%] right-0 bottom-0 z-[200]" />
 
-
-      <CgArrangeBack className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[50%] right-0 bottom-0 z-[200]" />
-      <CgAlignRight className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[55%] right-0 bottom-0 z-[200]" />
-      <CgArrangeFront className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[60%] right-0 bottom-0 z-[200]" />
-      <CgAlignTop className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[65%] right-0 bottom-0 z-[200]" />
-      <CgEditFlipH className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[80%] right-0 bottom-0 z-[200]" />
+      <CgArrangeBack className="hidden lg:block text-4xl text-gray-200 mb-4 absolute top-[35%] left-[50%] right-0 bottom-0 z-[200]" />
+      <CgAlignRight className="hidden lg:block text-4xl text-gray-200 mb-4 absolute top-[35%] left-[55%] right-0 bottom-0 z-[200]" />
+      <CgArrangeFront className="hidden lg:block text-4xl text-gray-200 mb-4 absolute top-[35%] left-[60%] right-0 bottom-0 z-[200]" />
+      <CgAlignTop className="hidden lg:block text-4xl text-gray-200 mb-4 absolute top-[35%] left-[65%] right-0 bottom-0 z-[200]" />
+      <CgEditFlipH className="hidden lg:block text-4xl text-gray-200 mb-4 absolute top-[35%] left-[80%] right-0 bottom-0 z-[200]" />
       {/* <CgEditBlackPoint className="text-4xl text-gray-200 mb-4 absolute top-[60%] left-[20%] right-0 bottom-0 z-[200]" /> */}
-      <CgLayoutGrid className="text-4xl text-gray-200 mb-4 absolute top-[35%] left-[85%] right-0 bottom-0 z-[200]" />
+      <CgLayoutGrid className="hidden lg:block text-4xl text-gray-200 mb-4 absolute top-[35%] left-[85%] right-0 bottom-0 z-[200]" />
 
-      <div className="overlay lg:ml-[100px] px-3">
+      <div className="overlay px-5 md:px-8 lg:ml-[100px]">
 
         <div className="hero-content z-50">
           <div>
